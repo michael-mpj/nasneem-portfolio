@@ -4,7 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const year = document.getElementById("currentYear");
-  if (year) year.textContent = new Date().getFullYear();
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
   const menuButton = document.querySelector(".menu-toggle");
   const navMenu = document.querySelector(".nav-menu");
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.setAttribute("aria-expanded", String(isOpen));
   });
 
-  navMenu?.querySelectorAll("a").forEach(link => {
+  navMenu?.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       navMenu.classList.remove("is-open");
       menuButton?.setAttribute("aria-expanded", "false");

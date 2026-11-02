@@ -1,10 +1,16 @@
 {
   "name": "Nasneem Khaleel - QA Engineer",
   "short_name": "Nasneem QA",
+  "id": "nasneem-portfolio",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#F5F7F8",
   "theme_color": "#101B2B",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "productivity", "employment"],
   "icons": [
     {
       "src": "assets/icons/favicon.svg",
@@ -14,12 +20,22 @@
     {
       "src": "assets/icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "assets/icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/images/screenshots/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "Nasneem Khaleel portfolio homepage"
     }
   ]
 }

@@ -1,0 +1,53 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "selector-class-pattern": null,
+    "scss/dollar-variable-pattern": null,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "no-descending-specificity": null,
+    "no-empty-source": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-no-important": true,
+    "declaration-property-value-no-unknown": true,
+    "color-no-hex": null,
+    "font-weight-no-numeric": null,
+    "value-no-vendor-prefix": true,
+    "property-no-vendor-prefix": true,
+    "selector-no-vendor-prefix": true,
+    "media-feature-name-no-vendor-prefix": true,
+    "at-rule-no-vendor-prefix": true,
+    "custom-property-pattern": null,
+    "declaration-block-single-line-max-one declaration": null,
+    "max-nesting-depth": 3,
+    "selector-max-type": 0,
+    "selector-max-universal": 1,
+    "selector-max-compound-selectors": 4,
+    "selector-list-comma-newline-after": "always",
+    "declaration-block-semicolon-newline-after": "always",
+    "declaration-block-trailing-semicolon": "always",
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": "first-nested",
+        "ignore": ["after-comment"]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": "first-nested",
+        "ignore": ["after-comment"]
+      }
+    ],
+    "comment-empty-line-before": [
+      "always",
+      {
+        "except": "first-nested",
+        "ignore": ["after-comment"]
+      }
+    ]
+  }
+}

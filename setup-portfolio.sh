@@ -43,22 +43,102 @@ cat > index.html <<'EOF'
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- PWA -->
+  <meta name="theme-color" content="#101B2B">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Nasneem QA">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/icon-16.png">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),l=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm/js?id='+i+l;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
   <title>Nasneem Khaleel | QA Engineer</title>
 
   <meta name="description"
     content="Nasneem Khaleel - QA Engineer specializing in email campaign testing, IVR automation, Selenium, and accessibility testing.">
-
+  <meta name="keywords" content="QA Engineer, IVR testing, email campaign testing, Selenium, Cyara, accessibility testing, test automation, Mississauga">
   <meta name="author" content="Nasneem Khaleel">
-  <meta name="theme-color" content="#101B2B">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet: -1, max-video-preview: -1">
 
+  <link rel="canonical" href="https://nasneem-portfolio.vercel.app/">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Nasneem Khaleel | QA Engineer">
   <meta property="og:description"
     content="QA Engineer specializing in Email Campaigns, IVR Automation and Test Automation.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://nasneem-portfolio.vercel.app/">
+  <meta property="og:image" content="https://nasneem-portfolio.vercel.app/assets/images/profile/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Nasneem Khaleel - QA Engineer">
+  <meta property="og:site_name" content="Nasneem Khaleel Portfolio">
+  <meta property="og:locale" content="en_CA">
 
-  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
-  <link rel="manifest" href="manifest.webmanifest">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@nasneem_khaleel">
+  <meta name="twitter:creator" content="@nasneem_khaleel">
+  <meta name="twitter:title" content="Nasneem Khaleel | QA Engineer">
+  <meta name="twitter:description"
+    content="QA Engineer specializing in Email Campaigns, IVR Automation and Test Automation.">
+  <meta name="twitter:image" content="https://nasneem-portfolio.vercel.app/assets/images/profile/og-image.png">
+  <meta name="twitter:image:alt" content="Nasneem Khaleel - QA Engineer">
 
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nasneem Khaleel",
+    "jobTitle": "QA Engineer",
+    "description": "QA Engineer specializing in email campaign testing, IVR automation, Selenium, and accessibility testing.",
+    "url": "https://nasneem-portfolio.vercel.app/",
+    "image": "https://nasneem-portfolio.vercel.app/assets/images/profile/og-image.png",
+    "email": "mailto:nasneem.k22@gmail.com",
+    "telephone": "+16479675369",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mississauga",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/nasneem-khaleel-70397b158/"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Track OMC"
+    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "IGNOU University"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "ICFAI University"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -71,7 +151,10 @@ cat > index.html <<'EOF'
 
 <body>
 
-<header class="site-header">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/gtm/js?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <header class="site-header">
   <nav class="container navigation">
 
     <a class="brand" href="#home">
@@ -455,6 +538,14 @@ cat > index.html <<'EOF'
 </footer>
 
 <script src="js/main.js"></script>
+  <script>
+    // Register PWA service worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
+      });
+    }
+  </script>
 </body>
 </html>
 EOF
@@ -681,12 +772,94 @@ cat > manifest.webmanifest <<'EOF'
 {
   "name": "Nasneem Khaleel - QA Engineer",
   "short_name": "Nasneem QA",
+  "id": "nasneem-portfolio",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "portrait",
   "background_color": "#F5F7F8",
   "theme_color": "#101B2B",
-  "icons": []
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["portfolio", "productivity", "employment"],
+  "icons": [
+    {
+      "src": "assets/icons/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
+EOF
+
+cat > sw.js <<'EOF'
+/**
+ * Nasneem Khaleel Portfolio — Service Worker
+ *
+ * Provides offline caching for the static portfolio site.
+ * Uses a cache-first strategy for assets, network-first for navigation.
+ */
+
+const CACHE_NAME = 'nasneem-portfolio-v1';
+const ASSETS_TO_CACHE = [
+  '/',
+  '/index.html',
+  '/cv.html',
+  '/css/main.css',
+  '/css/print.css',
+  '/js/main.js',
+  '/assets/icons/favicon.svg',
+  '/manifest.webmanifest'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => cache.addAll(ASSETS_TO_CACHE))
+  );
+  self.skipWaiting();
+});
+
+self.addEventListener('activate', (event) => {
+  event.waitUntil(
+    caches.keys().then((keys) =>
+      Promise.all(
+        keys.filter((key) => key !== CACHE_NAME).map((key) => caches.delete(key))
+      )
+    )
+  );
+  self.clients.claim();
+});
+
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+
+  if (request.method !== 'GET' || !request.url.startsWith(self.location.origin)) {
+    return;
+  }
+
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request).catch(() => caches.match('/index.html'))
+    );
+    return;
+  }
+
+  event.respondWith(
+    caches.match(request).then((cached) => cached || fetch(request))
+  );
+});
 EOF
 
 # ------------------------------------------
@@ -704,8 +877,13 @@ cat > sitemap.xml <<'EOF'
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nasneem-portfolio.vercel.app/</loc>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://nasneem-portfolio.vercel.app/cv.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
 EOF
@@ -723,6 +901,295 @@ dist/
 EOF
 
 # ------------------------------------------
+# package.json
+# ------------------------------------------
+
+cat > package.json <<'EOF'
+{
+  "name": "nasneem-portfolio",
+  "version": "1.0.0",
+  "description": "Responsive static portfolio website for Nasneem Khaleel — QA Engineer.",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "dev": "python3 -m http.server 8080",
+    "build": "echo \"No build step required — static site\" && exit 0",
+    "lint": "npm run lint:css && npm run lint:html && npm run lint:js",
+    "lint:css": "stylelint \"css/**/*.css\" --fix",
+    "lint:html": "htmlhint index.html cv.html",
+    "lint:js": "eslint js/ --fix",
+    "format": "prettier --write \"css/**/*.css\" \"*.html\" \"sections/**/*.html\" \"js/**/*.js\"",
+    "test": "echo \"No tests configured\" && exit 0",
+    "preview": "python3 -m http.server 8080",
+    "ci": "npm run lint && npm run build"
+  },
+  "keywords": [
+    "portfolio",
+    "qa",
+    "resume",
+    "static-site",
+    "pwa"
+  ],
+  "author": "Nasneem Khaleel",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "htmlhint": "^2.0.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard-scss": "^13.0.0"
+  }
+}
+EOF
+
+# ------------------------------------------
+# GitHub Actions workflow
+# ------------------------------------------
+
+mkdir -p .github/workflows
+
+cat > .github/workflows/deploy.yml <<'EOF'
+name: Deploy to Vercel
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+  workflow_dispatch:
+
+jobs:
+  lint-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint CSS (auto-fix)
+        run: npm run lint:css
+
+      - name: Lint HTML
+        run: npm run lint:html
+
+      - name: Lint JavaScript (auto-fix)
+        run: npm run lint:js
+
+      - name: Format code
+        run: npm run format
+
+      - name: Build check
+        run: npm run build
+
+      - name: Commit auto-fixes
+        if: github.event_name == 'push'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-fix lint and formatting"
+          commit_author: GitHub Actions <actions@github.com>
+
+      - name: Deploy to Vercel (production)
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+        uses: vercel/actions@v1
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: '--prod'
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+
+      - name: Deploy to Vercel (preview)
+        if: github.event_name == 'pull_request'
+        uses: vercel/actions@v1
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-args: '--preview'
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+EOF
+
+# ------------------------------------------
+# Linting configs
+# ------------------------------------------
+
+cat > .eslintrc.cjs <<'EOF'
+module.exports = {
+  root: true,
+  env: {
+    browser: true,
+    es2022: true,
+    node: true,
+  },
+  extends: "eslint:recommended",
+  parserOptions: {
+    ecmaVersion: 2022,
+    sourceType: "module",
+  },
+  rules: {
+    semi: ["error", "always"],
+    quotes: ["error", "double"],
+    "no-unused-vars": ["error", { args: "after-used" }],
+    "no-undef": "error",
+    "no-console": "warn",
+    "no-debugger": "warn",
+    eqeqeq: "error",
+    curly: "error",
+    "brace-style": "error",
+    "dot-notation": "error",
+    "no-extra-semi": "error",
+    "no-multiple-empty-lines": ["error", { max: 1 }],
+    "prefer-const": "error",
+    "prefer-arrow-callback": "error",
+    "no-var": "error",
+    "object-shorthand": "error",
+    "prefer-template": "error",
+    "arrow-body-style": "warn",
+    "max-len": ["warn", 100],
+    indent: ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "no-trailing-spaces": "error",
+    "eol-last": "error",
+  },
+};
+EOF
+
+cat > .stylelintrc.json <<'EOF'
+{
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "selector-class-pattern": null,
+    "scss/dollar-variable-pattern": null,
+    "scss/selector-no-redundant-nesting-selector": true,
+    "no-descending-specificity": null,
+    "no-empty-source": true,
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-no-important": true,
+    "declaration-property-value-no-unknown": true,
+    "color-no-hex": null,
+    "font-weight-no-numeric": null,
+    "value-no-vendor-prefix": true,
+    "property-no-vendor-prefix": true,
+    "selector-no-vendor-prefix": true,
+    "media-feature-name-no-vendor-prefix": true,
+    "at-rule-no-vendor-prefix": true,
+    "custom-property-pattern": null,
+    "declaration-block-single-line-max-one declaration": null,
+    "max-nesting-depth": 3,
+    "selector-max-type": 0,
+    "selector-max-universal": 1,
+    "selector-max-compound-selectors": 4,
+    "selector-list-comma-newline-after": "always",
+    "declaration-block-semicolon-newline-after": "always",
+    "declaration-block-trailing-semicolon": "always",
+    "rule-empty-line-before": [
+      "always",
+      {
+        "except": "first-nested",
+        "ignore": ["after-comment"]
+      }
+    ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": "first-nested",
+        "ignore": ["after-comment"]
+      }
+    ],
+    "comment-empty-line-before": [
+      "always",
+      {
+        "except": "first-nested",
+        "ignore": ["after-comment"]
+      }
+    ]
+  }
+}
+EOF
+
+cat > .htmlhintrc <<'EOF'
+{
+  "htmlhint": {
+    "htmlhint": {
+      "attr-lowercase": true,
+      "attr-no-duplicate": true,
+      "attr-no-unexpected-close": true,
+      "attr-value-double-quotes": true,
+      "attr-value-not-empty": true,
+      "base-tag": true,
+      "bold-first": true,
+      "br-newline": true,
+      "br-space": true,
+      "button-has-content": true,
+      "css-quotes": true,
+      "doctype": true,
+      "head-block": true,
+      "head-unique": true,
+      "h1-first": true,
+      "href-abs-or-rel": true,
+      "html-attrs": true,
+      "html-strict": true,
+      "id-class-repeat": false,
+      "inline-styles": false,
+      "img-alt": true,
+      "img-req-alt": true,
+      "input-requires-label": true,
+      "input-button-has-content": true,
+      "italic-first": true,
+      "label-has-for": true,
+      "link-requires-href": true,
+      "link-req-rel": false,
+      "meta-utf8": true,
+      "no-attrs-on-empty": true,
+      "no-duplicate-attr": true,
+      "no-empty-tags": true,
+      "no-restricted-elements": true,
+      "no-restricted-attrs": true,
+      "no-restricted-input-types": true,
+      "no-unsupported-attrs": true,
+      "no-unsupported-elements": true,
+      "object-requires-alt": true,
+      "script-requires-src": false,
+      "space-after-attr-name": true,
+      "space-after-attr-value": true,
+      "space-before-attr-name": true,
+      "space-before-tag": true,
+      "space-in-tag": true,
+      "split-tags-newline": true,
+      "tag-name-lowercase": true,
+      "tags-close-in-order": true,
+      "tags-close-order": true,
+      "title-no-special-chars": true,
+      "title-required": true,
+      "unique-id": true,
+      "value-attr-double-quotes": true,
+      "void-elements": true,
+      "void-element-empty-newline": true,
+      "void-element-self-close": true,
+      "raw-block-elements": true
+    }
+  }
+}
+EOF
+
+# ------------------------------------------
 # README
 # ------------------------------------------
 
@@ -737,6 +1204,8 @@ Responsive static portfolio website for Nasneem Khaleel.
 - Vanilla JavaScript
 - Lucide icons
 - Google Fonts (Inter)
+- Service Worker (PWA)
+- GitHub Actions (CI/CD)
 
 ## Features
 - Responsive layout
@@ -746,7 +1215,10 @@ Responsive static portfolio website for Nasneem Khaleel.
 - Technical expertise cards
 - Print / Save as PDF resume
 - SEO and Open Graph metadata
-- PWA manifest starter
+- PWA (service worker, icons, manifest)
+- Google Analytics 4
+- Google Tag Manager
+- Automated deployment to Vercel
 
 ## Run locally
 
@@ -755,6 +1227,8 @@ Open `index.html` in a browser or use a local static server.
 For example:
 
 ```bash
+npm start
+# or
 python3 -m http.server 8080
 ```
 
@@ -766,7 +1240,40 @@ Then visit http://localhost:8080.
 3. Add a final PDF resume under `assets/documents/` if you want a direct PDF download.
 4. Confirm the ELT Bridge-to-Work Program dates before adding it.
 5. Review all resume content and contact details.
-6. Configure real analytics IDs only if analytics and consent are implemented.
+6. Replace the placeholder analytics IDs:
+   - `GTM-XXXXXXX` in `index.html`, `cv.html`, and the GTM noscript iframe
+   - `G-XXXXXXX` in `index.html` and `cv.html`
+7. Add PWA icon files:
+   - `assets/icons/icon-192.png` (192x192 PNG)
+   - `assets/icons/icon-512.png` (512x512 PNG)
+   - `assets/icons/icon-32.png` (32x32 PNG)
+   - `assets/icons/icon-16.png` (16x16 PNG)
+   - `assets/icons/apple-touch-icon.png` (180x180 PNG)
+   - `assets/images/profile/og-image.png` (1200x630 PNG)
+8. The service worker (`sw.js`) is registered automatically on both pages. To update, bump the `CACHE_NAME` in `sw.js`.
+
+## GitHub Actions workflow
+
+A CI/CD workflow is configured at `.github/workflows/deploy.yml`:
+
+- **Push to `main` or `master`** → deploys to Vercel production (`--prod`)
+- **Pull request** → deploys a preview build (`--preview`)
+- **Manual trigger** via the Actions tab (`workflow_dispatch`)
+
+### Required GitHub secrets
+Add these repository secrets under Settings → Secrets and variables → Actions:
+
+| Secret | Purpose |
+|---|---|
+| `VERCEL_TOKEN` | Vercel CLI auth token |
+| `VERCEL_ORG_ID` | Your Vercel organization ID |
+| `VERCEL_PROJECT_ID` | Your Vercel project ID |
+
+### Vercel setup
+1. Install Vercel CLI: `npm i -g vercel`
+2. Log in: `vercel login`
+3. Link project: `vercel link`
+4. Add the secrets above from `vercel env ls` or the Vercel dashboard.
 
 ## Deployment
 Can be deployed as a static website to GitHub Pages, Netlify or Vercel.
@@ -810,8 +1317,13 @@ echo "1. Review index.html and resume details."
 echo "2. Add your profile photo to assets/images/profile/."
 echo "3. Add a PDF resume to assets/documents/ if required."
 echo "4. Replace `nasneem-portfolio.vercel.app` in robots.txt and sitemap.xml if deploying elsewhere."
-echo "5. Confirm the ELT program dates before publishing."
+echo "5. Replace GTM-XXXXXXX and G-XXXXXXX with real analytics IDs."
+echo "6. Add PWA icon PNGs to assets/icons/."
+echo "7. Confirm the ELT program dates before publishing."
+echo "8. Install dev dependencies: npm install"
+echo "9. Run auto-fix: npm run lint"
 echo ""
 echo "Start local preview:"
+echo "npm start"
 echo "python3 -m http.server 8080"
 echo ""

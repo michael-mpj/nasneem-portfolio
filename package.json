@@ -1,0 +1,38 @@
+{
+  "name": "nasneem-portfolio",
+  "version": "1.0.0",
+  "description": "Responsive static portfolio website for Nasneem Khaleel — QA Engineer.",
+  "private": true,
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "dev": "python3 -m http.server 8080",
+    "build": "echo \"No build step required — static site\" && exit 0",
+    "lint": "npm run lint:css && npm run lint:html && npm run lint:js",
+    "lint:css": "stylelint \"css/**/*.css\" --fix",
+    "lint:html": "htmlhint index.html cv.html",
+    "lint:js": "eslint js/ --fix",
+    "format": "prettier --write \"css/**/*.css\" \"*.html\" \"sections/**/*.html\" \"js/**/*.js\"",
+    "test": "echo \"No tests configured\" && exit 0",
+    "preview": "python3 -m http.server 8080",
+    "ci": "npm run lint && npm run build"
+  },
+  "keywords": [
+    "portfolio",
+    "qa",
+    "resume",
+    "static-site",
+    "pwa"
+  ],
+  "author": "Nasneem Khaleel",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "htmlhint": "^2.0.0",
+    "prettier": "^3.0.0",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard-scss": "^13.0.0"
+  }
+}

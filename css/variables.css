@@ -1,14 +1,14 @@
 :root {
-  --color-navy: #101B2B;
-  --color-emerald: #16856B;
-  --color-mint: #E7F4EF;
-  --color-background: #F5F7F8;
-  --color-gold: #E3AD58;
+  --color-navy: #101b2b;
+  --color-emerald: #16856b;
+  --color-mint: #e7f4ef;
+  --color-background: #f5f7f8;
+  --color-gold: #e3ad58;
   --color-text: #253244;
   --color-muted: #687586;
   --color-white: #ffffff;
   --font-main: "Inter", sans-serif;
   --container-width: 1160px;
   --radius: 16px;
-  --shadow: 0 12px 35px rgba(16, 27, 43, .07);
+  --shadow: 0 12px 35px rgba(16, 27, 43, 0.07);
 }
