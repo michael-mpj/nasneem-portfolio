@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nasneem Khaleel — QA Engineer specializing in email campaign quality assurance, IVR testing, Cyara, Selenium automation and accessibility.">
+  <meta name="theme-color" content="#f4f6f8">
+  <title>Nasneem Khaleel | QA Engineer</title>
+  <style>
+    /* Design tokens */
+    :root {
+      color-scheme: light;
+      --color-page: #f4f6f8;
+      --color-surface: #ffffff;
+      --color-surface-soft: #f8fafc;
+      --color-ink: #17212f;
+      --color-muted: #647184;
+      --color-line: #e4e9ef;
+      --color-accent: #176b57;
+      --color-accent-dark: #105342;
+      --color-accent-soft: #e8f3ef;
+      --color-highlight: #d89a36;
+      --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      --space-1: .35rem;
+      --space-2: .65rem;
+      --space-3: 1rem;
+      --space-4: 1.4rem;
+      --space-5: 2rem;
+      --space-6: 2.8rem;
+      --radius-sm: .55rem;
+      --radius-md: .9rem;
+      --radius-lg: 1.25rem;
+      --shadow-card: 0 14px 38px rgb(23 33 47 / 6%);
+      --content-width: 1120px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+    body {
+      margin: 0;
+      background: var(--color-page);
+      color: var(--color-ink);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--color-accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--color-accent-dark); }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--color-highlight); outline-offset: 3px; }
+    .skip-link {
+      position: absolute; left: -9999px; top: 1rem; z-index: 10;
+      padding: .7rem 1rem; background: var(--color-ink); color: white; border-radius: var(--radius-sm);
+    }
+    .skip-link:focus { left: 1rem; }
+    .page-shell { width: min(var(--content-width), calc(100% - 2rem)); margin-inline: auto; padding-block: 2rem 4rem; }
+    .topbar {
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .brand { display: inline-flex; align-items: center; gap: .65rem; color: var(--color-ink); font-weight: 750; letter-spacing: -.02em; text-decoration: none; }
+    .brand-mark {
+      display: grid; place-items: center; width: 2.25rem; height: 2.25rem;
+      border-radius: .7rem; background: var(--color-accent); color: white; font-size: .82rem; letter-spacing: .02em;
+    }
+    .top-actions { display: flex; align-items: center; gap: .65rem; }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center; gap: .45rem;
+      min-height: 2.55rem; padding: .55rem .9rem; border: 1px solid var(--color-line);
+      border-radius: 999px; background: var(--color-surface); color: var(--color-ink);
+      font: inherit; font-size: .88rem; font-weight: 650; text-decoration: none; cursor: pointer;
+    }
+    .button-primary { border-color: var(--color-accent); background: var(--color-accent); color: white; }
+    .button-primary:hover { background: var(--color-accent-dark); color: white; }
+    .hero {
+      position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) auto;
+      gap: 2rem; align-items: end; padding: clamp(1.6rem, 4vw, 3.4rem);
+      border-radius: var(--radius-lg); background: var(--color-surface); box-shadow: var(--shadow-card);
+    }
+    .hero::after {
+      content: ""; position: absolute; width: 18rem; height: 18rem; right: -8rem; top: -10rem;
+      border: 2.8rem solid var(--color-accent-soft); border-radius: 50%; pointer-events: none;
+    }
+    .eyebrow { margin: 0 0 .6rem; color: var(--color-accent); font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    h1 { margin: 0; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.08; letter-spacing: -.055em; }
+    .hero-role { margin: .85rem 0 1.2rem; color: var(--color-muted); font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 550; }
+    .contact-list { display: flex; flex-wrap: wrap; gap: .55rem 1.15rem; margin: 0; padding: 0; list-style: none; color: var(--color-muted); font-size: .88rem; }
+    .contact-list a { color: inherit; text-decoration: none; }
+    .contact-list a:hover { color: var(--color-accent); text-decoration: underline; }
+    .hero-aside { position: relative; z-index: 1; display: grid; justify-items: end; gap: .7rem; }
+    .availability { display: inline-flex; align-items: center; gap: .5rem; padding: .45rem .75rem; border-radius: 999px; background: var(--color-accent-soft); color: var(--color-accent-dark); font-size: .76rem; font-weight: 750; white-space: nowrap; }
+    .availability::before { content: ""; width: .45rem; height: .45rem; border-radius: 50%; background: var(--color-accent); }
+    .hero-note { max-width: 11rem; color: var(--color-muted); font-size: .78rem; text-align: right; }
+    .layout { display: grid; grid-template-columns:  minmax(0, 1.65fr) minmax(250px, .85fr); gap: 1.25rem; margin-top: 1.25rem; align-items: start; }
+    .main-column, .side-column { display: grid; gap: 1.25rem; }
+    .panel { padding: clamp(1.25rem, 3vw, 1.8rem); border: 1px solid var(--color-line); border-radius: var(--radius-md); background: var(--color-surface); box-shadow: var(--shadow-card); }
+    .section-heading { display: flex; align-items: center; gap: .75rem; margin: 0 0 1.15rem; font-size: 1.08rem; letter-spacing: -.02em; }
+    .section-heading::before { content: ""; width: .25rem; height: 1.2rem; border-radius: 1rem; background: var(--color-accent); }
+    .summary { margin: 0; color: #435064; }
+    .summary strong { color: var(--color-ink); }
+    .stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: .65rem; margin-top: 1.35rem; }
+    .stat { padding: .8rem; border-radius: var(--radius-sm); background: var(--color-surface-soft); }
+    .stat strong { display: block; color: var(--color-accent); font-size: 1.35rem; line-height: 1.3; letter-spacing: -.04em; }
+    .stat span { color: var(--color-muted); font-size: .72rem; }
+    .job { position: relative; padding: 0 0 1.4rem 1.15rem; border-left: 1px solid var(--color-line); }
+    .job:last-child { padding-bottom: 0; border-left-color: transparent; }
+    .job::before { content: ""; position: absolute; left: -.32rem; top: .38rem; width: .6rem; height: .6rem; border: 2px solid var(--color-accent); border-radius: 50%; background: white; }
+    .job-header { display: flex; justify-content: space-between; gap: 1rem; align-items: start; }
+    .job h3 { margin: 0; font-size: .98rem; line-height: 1.4; }
+    .company { margin: .2rem 0 .5rem; color: var(--color-accent); font-size: .85rem; font-weight: 700; }
+    .date { flex: 0 0 auto; color: var(--color-muted); font-family: var(--font-mono); font-size: .7rem; white-space: nowrap; }
+    .job ul, .plain-list { margin: .5rem 0 0; padding-left: 1.15rem; color: #4b586a; }
+    .job li, .plain-list li { margin: .3rem 0; padding-left: .15rem; }
+    .job li::marker, .plain-list li::marker { color: var(--color-accent); }
+    .skill-group + .skill-group { margin-top: 1.1rem; }
+    .skill-group h3 { margin: 0 0 .45rem; font-size: .82rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+    .tag-list li { padding: .28rem .55rem; border: 1px solid var(--color-line); border-radius: .4rem; background: var(--color-surface-soft); color: #465367; font-size: .72rem; line-height: 1.45; }
+    .education-item + .education-item { margin-top: .9rem; padding-top: .9rem; border-top: 1px solid var(--color-line); }
+    .education-item h3 { margin: 0; font-size: .86rem; line-height: 1.45; }
+    .education-item p { margin: .2rem 0 0; color: var(--color-muted); font-size: .77rem; }
+    .achievement { display: flex; gap: .65rem; align-items: start; color: #4b586a; font-size: .84rem; }
+    .achievement + .achievement { margin-top: .75rem; }
+    .achievement-mark { flex: 0 0 auto; display: grid; place-items: center; width: 1.35rem; height: 1.35rem; border-radius: 50%; background: var(--color-accent-soft); color: var(--color-accent); font-size: .8rem; font-weight: 800; }
+    .project-label { display: inline-block; margin: 0 0 .5rem; color: var(--color-muted); font-size: .7rem; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+    .footer { padding: 1.5rem .25rem 0; color: var(--color-muted); font-size: .75rem; text-align: center; }
+    @media (max-width: 780px) {
+      .layout { grid-template-columns: 1fr; }
+      .side-column { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .side-column .panel:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 560px) {
+      .page-shell { width: min(100% - 1rem, var(--content-width)); padding-top: .7rem; }
+      .topbar { align-items: flex-start; }
+      .brand-name { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 1.2rem; }
+      .hero-aside { justify-items: start; }
+      .hero-note { max-width: none; text-align: left; }
+      .contact-list { display: grid; gap: .35rem; }
+      .side-column { grid-template-columns: 1fr; }
+      .side-column .panel:first-child { grid-column: auto; }
+      .job-header { display: block; }
+      .date { display: block; margin-top: .3rem; }
+      .stat-grid { gap: .4rem; }
+    }
+    @media print {
+      :root { --color-page: #fff; --shadow-card: none; }
+      body { background: white; font-size: 10pt; }
+      .page-shell { width: 100%; max-width: none; padding: 0; }
+      .topbar, .top-actions, .hero-aside { display: none !important; }
+      .hero, .panel { box-shadow: none; border: 1px solid #d9dee5; break-inside: avoid; }
+      .hero { padding: 1.2rem; }
+      .layout { grid-template-columns: 1.55fr 1fr; gap: .65rem; margin-top: .65rem; }
+      .main-column, .side-column { gap: .65rem; }
+      .panel { padding: .85rem; }
+      .job { break-inside: avoid; }
+      a { color: inherit; text-decoration: none; }
+      .footer { padding-top: .5rem; }
+      @page { margin: 12mm; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Nasneem Khaleel resume home">
+        <span class="brand-mark" aria-hidden="true">NK</span>
+        <span class="brand-name">Professional Profile</span>
+      </a>
+      <div class="top-actions">
+        <a class="button" href="https://www.linkedin.com/in/nasneem-khaleel-70397b158/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <button class="button button-primary" type="button" onclick="window.print()">Print / Save PDF</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="profile-name">
+        <div>
+          <p class="eyebrow">Quality Engineering · Email · IVR · Automation</p>
+          <h1 id="profile-name">Nasneem Khaleel</h1>
+          <p class="hero-role">QA Engineer — Email Campaigns &amp; IVR Tester</p>
+          <ul class="contact-list" aria-label="Contact information">
+            <li>⌖ Mississauga, ON L5M 6R1</li>
+            <li><a href="tel:+16479675369">☎ 647-967-5369</a></li>
+            <li><a href="mailto:nasneem.k22@gmail.com">✉ nasneem.k22@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/nasneem-khaleel-70397b158/" target="_blank" rel="noopener noreferrer">in LinkedIn profile ↗</a></li>
+          </ul>
+        </div>
+        <aside class="hero-aside" aria-label="Professional highlights">
+          <span class="availability">Quality-focused professional</span>
+          <span class="hero-note">Manual QA · Test Automation · Customer Journey Validation</span>
+        </aside>
+      </section>
+
+      <div class="layout">
+        <div class="main-column">
+          <section class="panel" aria-labelledby="summary-heading">
+            <h2 class="section-heading" id="summary-heading">Professional Summary</h2>
+            <p class="summary">
+              QA professional with <strong>9+ years of IT experience</strong>, including 5+ years in software quality assurance, manual and automated testing, IVR/contact-flow validation, email campaign testing and mobile applications. Experienced in <strong>Cyara</strong> for automated IVR scenarios and <strong>Selenium WebDriver with Java</strong> for web test automation. Skilled in validating customer journeys, responsive email experiences, APIs, accessibility and business workflows across enterprise environments. Collaborative Agile team member with hands-on experience in Jira, Jenkins, Git and AI-assisted quality engineering.
+            </p>
+            <div class="stat-grid" aria-label="Experience highlights">
+              <div class="stat"><strong>9+</strong><span>Years in IT</span></div>
+              <div class="stat"><strong>5+</strong><span>Years in QA</span></div>
+              <div class="stat"><strong>50+</strong><span>Defects tracked</span></div>
+            </div>
+          </section>
+
+          <section class="panel" aria-labelledby="experience-heading">
+            <h2 class="section-heading" id="experience-heading">Professional Experience</h2>
+
+            <article class="job">
+              <header class="job-header">
+                <div>
+                  <h3>Software Quality Analyst</h3>
+                  <p class="company">Track OMC · Toronto, ON</p>
+                </div>
+                <time class="date" datetime="2024-12">Dec 2024 – Present</time>
+              </header>
+              <ul>
+                <li>Test email campaigns and marketing communications using Litmus, validating responsive layouts, dynamic content, personalization, links, images, accessibility and dark-mode rendering across devices, browsers and email clients.</li>
+                <li>Develop and execute functional test cases for email content, conditional content, CTA functionality, campaign rules, customer data and journey triggers.</li>
+                <li>Apply IVR and conversational workflow testing concepts to validate customer journeys, menu navigation, business rules, routing logic, prompts, error handling and fallback scenarios.</li>
+                <li>Design and execute Cyara scenarios for positive, negative, exception, timeout, retry and fallback conditions to validate end-to-end customer interactions.</li>
+                <li>Check marketing communications against AODA/WCAG accessibility expectations, CASL requirements and organizational quality guidelines.</li>
+                <li>Retest fixes, run regression tests and collaborate with designers, marketers and stakeholders using Jira, Figma and Photoshop to resolve rendering and content issues.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <header class="job-header">
+                <div>
+                  <h3>QA Engineer / IVR &amp; Automation Tester</h3>
+                  <p class="company">JMG Media Group · Mississauga, ON</p>
+                  <p class="project-label">Client: ILACO Accounting and Financial Company</p>
+                </div>
+                <time class="date" datetime="2020-12">Dec 2020 – Oct 2024</time>
+              </header>
+              <ul>
+                <li>Designed and executed Cyara automated test cases for inbound and outbound IVR scenarios, validating complete customer journeys from call initiation through final disposition.</li>
+                <li>Validated speech recognition, DTMF input, prompts, menu navigation, authentication, business rules, queue and skill-based routing, transfers, overflow and fallback paths.</li>
+                <li>Created reusable Cyara components and automated regression suites to improve coverage and reduce repetitive manual IVR testing.</li>
+                <li>Built and tested responsive HTML/CSS email templates, including dark-mode coding, for Outlook, Gmail, Apple Mail and mobile clients.</li>
+                <li>Designed Selenium WebDriver automation using Java, TestNG and Maven; applied Page Object Model and data-driven testing practices.</li>
+                <li>Performed functional, regression, integration and UAT testing; identified and tracked 50+ defects in Jira with clear reproduction details.</li>
+                <li>Worked with designers and stakeholders using Jira, Figma and Photoshop to investigate technical and email-rendering issues.</li>
+                <li>Used AI-assisted tools to support test-case generation and automation development.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <header class="job-header">
+                <div>
+                  <h3>Quality Analyst</h3>
+                  <p class="company">50Hands Organization · Mississauga, ON</p>
+                </div>
+                <time class="date" datetime="2020-06">Jun 2020 – Dec 2020</time>
+              </header>
+              <ul>
+                <li>Designed and implemented Selenium WebDriver automation frameworks using Java and TestNG.</li>
+                <li>Performed functional and regression testing for web, mobile and chatbot applications against business and functional requirements.</li>
+                <li>Created test plans and test cases, documented defects with reproduction steps and evidence, and validated fixes after releases and configuration changes.</li>
+                <li>Collaborated with developers and stakeholders to prioritize critical defects and improve application reliability.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <header class="job-header">
+                <div>
+                  <h3>Web Developer</h3>
+                  <p class="company">Portrave Solutions · Kochi, India</p>
+                </div>
+                <time class="date" datetime="2016-01">Jan 2016 – Oct 2019</time>
+              </header>
+              <ul>
+                <li>Designed and developed responsive websites using HTML, CSS and JavaScript, focusing on usability and cross-device experience.</li>
+                <li>Gathered client requirements in regular meetings and coordinated with the team to deliver projects on schedule.</li>
+                <li>Troubleshot technical issues and used version control to track, test and update existing code.</li>
+              </ul>
+            </article>
+          </section>
+
+          <section class="panel" aria-labelledby="training-heading">
+            <h2 class="section-heading" id="training-heading">Hands-on Training Project</h2>
+            <article>
+              <h3 style="margin:0;font-size:.98rem">IVR Testing — Telecommunications / Customer Service</h3>
+              <p class="company">QA Tester · Tools: Cyara, Postman, REST APIs, Jira</p>
+              <ul class="plain-list">
+                <li>Designed end-to-end IVR test scenarios covering call initiation, menu navigation, DTMF input, authentication, business rules, routing, transfers and expected outcomes.</li>
+                <li>Created Cyara test cases to simulate customer interactions and validate prompts, menu selections, call flows and fallback behavior.</li>
+                <li>Practiced API integration testing with Postman for REST services supporting customer and account information.</li>
+                <li>Prepared test data and documented expected/actual results and defects in Jira, including reproduction steps, severity and supporting evidence.</li>
+                <li>Created sample customer-service journeys for billing inquiries, account information, technical support and general assistance.</li>
+                <li>Used ChatGPT, GitHub Copilot and enterprise AI tools to help derive test scenarios and scripts from business requirements.</li>
+              </ul>
+            </article>
+          </section>
+        </div>
+
+        <aside class="side-column" aria-label="Skills, education and achievements">
+          <section class="panel" aria-labelledby="skills-heading">
+            <h2 class="section-heading" id="skills-heading">Technical Skills</h2>
+            <div class="skill-group">
+              <h3>IVR &amp; Contact Centre Testing</h3>
+              <ul class="tag-list">
+                <li>Cyara</li><li>Campaigns &amp; Behaviors</li><li>IVR Call Flows</li><li>DTMF</li><li>Speech Recognition</li><li>CTI Integration</li><li>Queue / Skill Routing</li><li>Contact Flow Validation</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Email Development &amp; Validation</h3>
+              <ul class="tag-list">
+                <li>HTML</li><li>CSS</li><li>Responsive Email</li><li>Dark Mode</li><li>Litmus</li><li>Email Rendering</li><li>Dynamic Content</li><li>Link &amp; Image Testing</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>QA &amp; Test Automation</h3>
+              <ul class="tag-list">
+                <li>Selenium WebDriver</li><li>Java</li><li>TestNG</li><li>JUnit</li><li>Maven</li><li>Page Object Model</li><li>Postman</li><li>JMeter</li><li>API Testing</li><li>Mobile Testing</li><li>Accessibility</li><li>Cross-Browser Testing</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Quality Practices</h3>
+              <ul class="tag-list">
+                <li>Functional Testing</li><li>Regression Testing</li><li>Integration Testing</li><li>Smoke Testing</li><li>UAT</li><li>Test Planning</li><li>Risk Assessment</li><li>Defect Triage</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h3>Tools &amp; Ways of Working</h3>
+              <ul class="tag-list">
+                <li>Jira</li><li>Jenkins</li><li>Git</li><li>GitHub</li><li>Figma</li><li>Photoshop</li><li>ChatGPT</li><li>GitHub Copilot</li><li>Agile</li><li>CI/CD</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="panel" aria-labelledby="education-heading">
+            <h2 class="section-heading" id="education-heading">Education</h2>
+            <div class="education-item">
+              <h3>Master of Computer Applications</h3>
+              <p>IGNOU University, India · Jul 2011 – Dec 2014</p>
+            </div>
+            <div class="education-item">
+              <h3>Bachelor of Computer Applications</h3>
+              <p>ICFAI University, India · Jun 2007 – Apr 2011</p>
+            </div>
+            <div class="education-item">
+              <h3>ELT Bridge-to-Work Program</h3>
+              <p>Mississauga, Ontario · Dates to confirm</p>
+            </div>
+          </section>
+
+          <section class="panel" aria-labelledby="achievements-heading">
+            <h2 class="section-heading" id="achievements-heading">Key Achievements</h2>
+            <div class="achievement"><span class="achievement-mark" aria-hidden="true">✓</span><span>Improved automation coverage and reduced manual testing effort through reusable Selenium frameworks.</span></div>
+            <div class="achievement"><span class="achievement-mark" aria-hidden="true">✓</span><span>Improved IVR testing efficiency with reusable Cyara components and data-driven execution.</span></div>
+            <div class="achievement"><span class="achievement-mark" aria-hidden="true">✓</span><span>Supported faster release cycles by integrating automated tests into CI/CD workflows.</span></div>
+          </section>
+        </aside>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>Nasneem Khaleel · QA Engineer · Mississauga, Ontario</p>
+    </footer>
+  </div>
+</body>
+</html>
