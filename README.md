@@ -32,7 +32,7 @@ python3 -m http.server 8080
 Then visit http://localhost:8080.
 
 ## Before deployment
-1. Replace `YOUR-DOMAIN.com` in `robots.txt` and `sitemap.xml`.
+1. Your domain is configured as `nasneem-portfolio.vercel.app` in `robots.txt` and `sitemap.xml`. Change if deploying elsewhere.
 2. Add an approved profile photo under `assets/images/profile/`.
 3. Add a final PDF resume under `assets/documents/` if you want a direct PDF download.
 4. Confirm the ELT Bridge-to-Work Program dates before adding it.

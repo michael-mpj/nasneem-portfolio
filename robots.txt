@@ -9,4 +9,4 @@ Disallow: assets/documents/
 User-agent: Googlebot
 Allow: /
 
-Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+Sitemap: https://nasneem-portfolio.vercel.app/sitemap.xml

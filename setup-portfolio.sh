@@ -696,14 +696,14 @@ EOF
 cat > robots.txt <<'EOF'
 User-agent: *
 Allow: /
-Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+Sitemap: https://nasneem-portfolio.vercel.app/sitemap.xml
 EOF
 
 cat > sitemap.xml <<'EOF'
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://YOUR-DOMAIN.com/</loc>
+    <loc>https://nasneem-portfolio.vercel.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -761,7 +761,7 @@ python3 -m http.server 8080
 Then visit http://localhost:8080.
 
 ## Before deployment
-1. Replace `YOUR-DOMAIN.com` in `robots.txt` and `sitemap.xml`.
+1. Your domain is configured as `nasneem-portfolio.vercel.app` in `robots.txt` and `sitemap.xml`. Change if deploying elsewhere.
 2. Add an approved profile photo under `assets/images/profile/`.
 3. Add a final PDF resume under `assets/documents/` if you want a direct PDF download.
 4. Confirm the ELT Bridge-to-Work Program dates before adding it.
@@ -809,7 +809,7 @@ echo "Next steps:"
 echo "1. Review index.html and resume details."
 echo "2. Add your profile photo to assets/images/profile/."
 echo "3. Add a PDF resume to assets/documents/ if required."
-echo "4. Replace YOUR-DOMAIN.com in robots.txt and sitemap.xml."
+echo "4. Replace `nasneem-portfolio.vercel.app` in robots.txt and sitemap.xml if deploying elsewhere."
 echo "5. Confirm the ELT program dates before publishing."
 echo ""
 echo "Start local preview:"
