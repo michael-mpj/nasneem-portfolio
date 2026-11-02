@@ -1,0 +1,717 @@
+
+# contextllms.txt
+# Project Context: Nasneem Khaleel – Professional Portfolio & Resume
+
+## 1. Project Overview
+
+Project Name: Nasneem Khaleel Portfolio
+Project Type: Personal Portfolio Website + Online Resume
+Website Format: Single-page responsive website
+Primary Purpose: Professional online presence and recruiter-friendly resume
+Target Audience:
+- Recruiters
+- Hiring managers
+- QA engineering teams
+- IT and software companies
+- Professional contacts
+
+The website must present Nasneem Khaleel as an experienced QA professional specializing in email campaign testing, IVR testing, contact-centre workflows, and test automation.
+
+The website should look like a modern professional portfolio, not simply a traditional CV converted into HTML.
+
+## 2. Personal and Professional Information
+
+Full Name: Nasneem Khaleel
+Professional Title: QA Engineer – Email Campaigns & IVR Tester
+Location: Mississauga, Ontario, Canada
+Postal Code: L5M 6R1
+
+Email: nasneem.k22@gmail.com
+Phone: 6479675369
+LinkedIn:
+https://www.linkedin.com/in/nasneem-khaleel-70397b158/
+
+Professional Experience:
+- 9+ years of IT experience
+- 5+ years of QA experience
+
+## 3. Professional Summary
+
+QA professional with over 9 years of IT experience and more than 5 years of quality assurance experience.
+
+Experienced in manual and automated testing across web applications, mobile applications, APIs, email campaigns, IVR systems, and contact-centre workflows.
+
+Hands-on experience with Cyara for IVR automation and Selenium WebDriver using Java and Maven.
+
+Knowledge of functional, regression, integration, system, UAT, API, accessibility, and cross-browser testing.
+
+Experienced in responsive email testing, dynamic content validation, email rendering, dark-mode compatibility, and accessibility standards.
+
+Familiar with AI-assisted test case generation, Jira defect management, Jenkins, GitHub, and CI/CD workflows.
+
+## 4. Website Sitemap and Sections
+
+The website should be a single-page portfolio with the following sections:
+
+1. Header and Navigation
+2. Hero / Introduction
+3. About Me
+4. Professional Highlights
+5. Technical Expertise
+6. Professional Experience
+7. IVR Hands-on Training Project
+8. Key Achievements
+9. Education and Certifications
+10. Contact
+11. Footer
+
+All sections should be accessible through smooth-scroll navigation.
+
+## 5. Header and Navigation Requirements
+
+Brand / Logo:
+- NK monogram
+- Nasneem Khaleel
+
+Navigation:
+- About
+- Expertise
+- Experience
+- Education
+- Contact
+
+Primary Action:
+- Download Resume
+
+Secondary Action:
+- Contact Me
+
+Requirements:
+- Sticky navigation
+- Responsive desktop and mobile layouts
+- Collapsible mobile navigation
+- Smooth scrolling
+- Active section highlighting
+- Accessible keyboard navigation
+
+## 6. Hero Section
+
+Display:
+- Nasneem Khaleel
+- QA Engineer – Email Campaigns & IVR Tester
+- Short professional introduction
+- Mississauga, Ontario, Canada
+- Email link
+- LinkedIn link
+
+Primary CTA:
+- Download Resume
+
+Secondary CTA:
+- Contact Me
+
+Visual requirements:
+- Large, clear typography
+- Strong visual hierarchy
+- Professional layout
+- Optional professional photograph
+- Subtle decorative background
+- Experience highlight cards
+
+## 7. About Me
+
+Present a concise professional introduction.
+
+Core professional strengths:
+- Manual and automation testing
+- IVR and contact-centre testing
+- Email campaign quality assurance
+- Selenium automation
+- API testing
+- Accessibility testing
+- Regression and integration testing
+- Agile collaboration
+
+Suggested UI:
+- Two-column layout
+- Professional summary
+- Core strengths cards
+- Quality engineering philosophy
+
+## 8. Professional Highlights
+
+Display the following statistics:
+
+9+ Years – IT Experience
+5+ Years – QA Experience
+50+ Defects – Tracked
+
+Additional highlights:
+- Cyara automation
+- Selenium frameworks
+- Email rendering validation
+- CI/CD testing
+
+Do not invent additional statistics or unsupported performance measurements.
+
+## 9. Technical Expertise
+
+Organize technical skills into six categories.
+
+### 9.1 IVR and Contact Centre Testing
+
+- Cyara
+- Cyara Campaigns
+- Cyara Behaviors
+- IVR Call Flows
+- DTMF
+- Speech Recognition
+- Hybrid Models
+- CTI Integration
+- Call Routing
+- Queue and Skill Routing
+- Overflow Routing
+
+### 9.2 Email Development and Testing
+
+- HTML
+- CSS
+- Responsive Email
+- Email Rendering
+- Dark Mode Testing
+- Dynamic Content Validation
+- Personalized Content Validation
+- Link and Image Validation
+- Litmus
+- Outlook Compatibility
+- Gmail Compatibility
+- Apple Mail Compatibility
+
+### 9.3 Test Automation
+
+- Selenium WebDriver
+- Java
+- TestNG
+- JUnit
+- Maven
+- Page Object Model (POM)
+- Data-Driven Testing
+
+### 9.4 API and Quality Assurance
+
+- Postman
+- JMeter
+- REST API Testing
+- UI Testing
+- Functional Testing
+- Regression Testing
+- Smoke Testing
+- Integration Testing
+- System Testing
+- UAT
+- Cross-Browser Testing
+
+### 9.5 Accessibility and Quality
+
+- AODA
+- WCAG
+- Accessibility Testing
+- Defect Management
+- Test Planning
+- Test Strategy
+- Risk Assessment
+- Stakeholder Reporting
+
+### 9.6 Tools, CI/CD and AI
+
+- Jira
+- Jenkins
+- Git
+- GitHub
+- Maven
+- ChatGPT
+- GitHub Copilot
+- AI-Assisted Test Case Generation
+- AI-Assisted Test Automation
+
+UI requirements:
+- Six categorized skill cards
+- Appropriate icons
+- Responsive skill tags
+- Consistent spacing
+- No invented skill percentages or proficiency ratings
+
+## 10. Professional Experience
+
+Present employment history as a vertical timeline.
+
+### 10.1 Software Quality Analyst
+
+Company: Track OMC
+Location: Toronto, Ontario, Canada
+Duration: December 2024 – Present
+
+Responsibilities:
+- Test email campaigns using Litmus.
+- Validate responsive email layouts.
+- Verify dynamic and personalized content.
+- Test links, images, and email content.
+- Validate dark-mode compatibility.
+- Test IVR and conversational workflows.
+- Create and execute Cyara test scenarios.
+- Perform AODA and WCAG accessibility checks.
+- Support CASL-related email validation.
+- Manage defects and retesting through Jira.
+- Work with Figma and Photoshop.
+- Perform regression testing.
+
+### 10.2 QA Engineer / IVR & Automation Tester
+
+Company: JMG Media Group
+Location: Mississauga, Ontario, Canada
+Duration: December 2020 – October 2024
+Client: ILACO Accounting and Financial Company
+
+Responsibilities:
+- Test inbound and outbound IVR systems using Cyara.
+- Validate speech recognition and DTMF interactions.
+- Test prompts, menus, authentication, and fallback scenarios.
+- Validate call routing and IVR workflows.
+- Develop reusable test cases and components.
+- Create HTML and CSS email templates.
+- Test email rendering and dark mode.
+- Validate Outlook, Gmail, Apple Mail, and mobile compatibility.
+- Develop Selenium automation using Java.
+- Use TestNG, Maven, and Page Object Model.
+- Track and document 50+ defects using Jira.
+- Use AI tools to support testing activities.
+
+### 10.3 Quality Analyst
+
+Company: 50Hands Organization
+Location: Mississauga, Ontario, Canada
+Duration: June 2020 – December 2020
+
+Responsibilities:
+- Selenium automation using Java and TestNG.
+- Web application testing.
+- Mobile application testing.
+- Chatbot functional testing.
+- Regression testing.
+- Test plan preparation.
+- Defect documentation and evidence collection.
+
+### 10.4 Web Developer
+
+Company: Portrave Solutions
+Location: Kochi, India
+Duration: January 2016 – October 2019
+
+Responsibilities:
+- Develop responsive websites.
+- Work with HTML, CSS, and JavaScript.
+- Implement client requirements.
+- Troubleshoot website issues.
+- Support version control and development workflows.
+
+## 11. IVR Hands-on Training Project
+
+Important:
+This is a hands-on training project and must be displayed separately from professional employment.
+
+Project Title:
+IVR Testing Hands-on Training Project
+
+Domain:
+Telecommunications / Customer Service
+
+Role:
+QA Tester – Training Project
+
+Tools:
+- Cyara
+- Postman
+- REST APIs
+- Jira
+- ChatGPT
+- GitHub Copilot
+
+Project activities:
+- Create IVR test scenarios.
+- Validate billing workflows.
+- Test account-related scenarios.
+- Test technical support call flows.
+- Validate DTMF interactions.
+- Verify authentication workflows.
+- Test call routing.
+- Validate API integration.
+- Document defects.
+- Use AI tools to assist with test case development.
+
+Suggested UI:
+- Project overview card
+- Scenario coverage
+- IVR call-flow diagram
+- API testing details
+- Test execution workflow
+
+Do not present this training project as paid employment.
+
+## 12. Key Achievements
+
+Display achievement cards for:
+
+1. Improved automation coverage and reduced manual testing effort.
+2. Developed reusable Cyara components and data-driven test execution.
+3. Supported faster release cycles through CI/CD integration.
+4. Improved defect identification and regression validation.
+
+Do not invent numerical impact or unsupported performance percentages.
+
+## 13. Education
+
+### Master of Computer Applications (MCA)
+
+Institution: IGNOU University, India
+Duration: July 2011 – December 2014
+
+### Bachelor of Computer Applications (BCA)
+
+Institution: ICFAI University, India
+Duration: June 2007 – April 2011
+
+### ELT Bridge-to-Work Program
+
+Location: Mississauga, Ontario, Canada
+
+Date information requires confirmation:
+The supplied resume contains June 2024 – August 2014, which appears inconsistent.
+
+Do not silently correct this date. Confirm the correct period before publishing.
+
+Certifications:
+Only display certifications when actual certification details are supplied and verified.
+
+## 14. Contact Section
+
+Display:
+- Email: nasneem.k22@gmail.com
+- Phone: 6479675369
+- LinkedIn: https://www.linkedin.com/in/nasneem-khaleel-70397b158/
+- Location: Mississauga, Ontario, Canada
+
+Functionality:
+- Email action using mailto
+- Phone action using tel
+- LinkedIn external link
+- Copy email functionality
+- Contact Me CTA
+
+Do not create a non-functional contact form.
+
+A contact form may be added only when a backend or form service is configured.
+
+## 15. Footer
+
+Include:
+- NK monogram
+- Nasneem Khaleel
+- Professional title
+- LinkedIn link
+- Email link
+- Copyright notice
+- Back-to-top action
+
+## 16. Visual Design System
+
+Recommended visual direction:
+Modern, clean, minimal, professional, and recruiter-friendly.
+
+Color palette:
+
+Primary Emerald: #16856B
+Dark Navy: #101B2B
+Mint: #E7F4EF
+Off-white: #F5F7F8
+Gold Accent: #E3AD58
+
+Typography:
+- Primary font: Inter
+- Strong, clean headings
+- Readable body text
+- Recommended body size: 14–16px
+
+Layout:
+- Maximum content width: 1160px
+- CSS Grid and Flexbox
+- Card border radius: 14–18px
+- Consistent spacing
+- Clear section separation
+- Subtle transitions
+
+Icons:
+- Lucide icons
+
+Avoid:
+- Excessive animations
+- Overloaded layouts
+- Unnecessary gradients
+- Excessive decorative elements
+- Invented statistics
+- Fake testimonials
+- Unsupported skill ratings
+
+## 17. Responsive Design Requirements
+
+Mobile:
+Up to 650px
+- Single-column layout
+- Collapsible navigation
+- Stacked cards
+- Readable typography
+- Touch-friendly buttons
+
+Tablet:
+651px – 1024px
+- Reduced column layouts
+- Compact cards
+- Responsive navigation
+- Optimized timeline
+
+Desktop:
+Above 1024px
+- Multi-column layouts
+- Full navigation
+- Expanded timeline
+- Maximum content width of 1160px
+
+Test on:
+- Mobile phones
+- Tablets
+- Desktop screens
+- Modern Chrome
+- Safari
+- Firefox
+- Edge
+
+## 18. Functional Requirements
+
+Must Have:
+- Sticky responsive navigation
+- Smooth scrolling
+- Resume download
+- Print-friendly resume
+- Email links
+- Phone links
+- LinkedIn links
+- Responsive mobile navigation
+- SEO title and description
+- Open Graph metadata
+- Accessible navigation
+
+Recommended:
+- Back-to-top button
+- Active navigation highlighting
+- Subtle scroll-reveal animations
+
+Optional:
+- Dark/light theme
+- PWA installation
+- Offline access
+- Google Analytics
+- Google Tag Manager
+
+Analytics must use real IDs and appropriate consent considerations.
+
+## 19. Technical Implementation
+
+Preferred stack:
+
+Structure:
+HTML5 semantic elements
+
+Styling:
+Custom CSS with CSS variables
+
+JavaScript:
+Vanilla JavaScript
+
+Icons:
+Lucide
+
+Typography:
+Google Fonts or locally hosted fonts
+
+Responsive Layout:
+CSS Grid and Flexbox
+
+Resume PDF:
+Browser print stylesheet
+
+Version Control:
+GitHub
+
+Deployment:
+Vercel or Netlify
+
+Important development preferences:
+- Use semantic HTML.
+- Use custom CSS class names.
+- Use CSS variables.
+- Keep JavaScript modular and maintainable.
+- Avoid unnecessary dependencies.
+- Do not use Tailwind CSS.
+- Do not use Bootstrap.
+- Do not use inline styles.
+- Prioritize accessibility and performance.
+
+## 20. SEO and Metadata
+
+Include:
+- SEO title
+- Meta description
+- Relevant keywords
+- Canonical URL when the production domain is known
+- Open Graph title
+- Open Graph description
+- Open Graph image
+- Favicon
+- Semantic heading hierarchy
+- Descriptive image alt text
+
+Do not invent a production domain or social profile.
+
+## 21. Accessibility Requirements
+
+- Semantic HTML structure
+- Keyboard-accessible navigation
+- Visible focus indicators
+- Accessible color contrast
+- Descriptive link labels
+- Appropriate image alt text
+- Accessible mobile menu
+- Reduced-motion support
+- Form labels if a form is introduced
+- AODA/WCAG-aware implementation
+
+## 22. Resume and Portfolio Modes
+
+The website should support two complementary experiences.
+
+### Portfolio Mode
+
+Purpose:
+Present a visually engaging professional profile.
+
+Characteristics:
+- Concise content
+- Visual skill categories
+- Experience timeline
+- Achievement cards
+- Contact actions
+- Easy navigation
+
+### Resume Mode
+
+Purpose:
+Provide detailed information suitable for job applications.
+
+Characteristics:
+- Full employment history
+- Detailed responsibilities
+- Complete technical skills
+- Education
+- Print-friendly formatting
+- PDF output through browser printing
+
+Both modes must use consistent information.
+
+## 23. Content Accuracy Rules
+
+- Do not invent employment history.
+- Do not invent certifications.
+- Do not invent client names.
+- Do not invent performance statistics.
+- Do not claim unsupported technical expertise.
+- Preserve company names and employment dates.
+- Keep training projects separate from employment.
+- Confirm inconsistent education dates.
+- Do not publish personal information beyond the supplied contact details.
+- Maintain consistent job titles and professional terminology.
+
+## 24. Development Checklist
+
+### Website Structure
+- Header and navigation
+- Hero section
+- About section
+- Professional highlights
+- Technical expertise
+- Experience timeline
+- IVR training project
+- Achievements
+- Education
+- Contact
+- Footer
+
+### UI and Design
+- Color system
+- Typography
+- Responsive cards
+- Skill tags
+- Icons
+- Mobile navigation
+- Accessibility
+- Consistent spacing
+
+### Functionality
+- Smooth scrolling
+- Resume download
+- Print layout
+- Email action
+- Phone action
+- LinkedIn action
+- Copy email
+- Back-to-top
+- Active navigation
+
+### Production
+- SEO metadata
+- Open Graph metadata
+- Favicon
+- Accessibility checks
+- Responsive testing
+- Cross-browser testing
+- GitHub repository
+- Production deployment
+
+## 25. Final Project Direction
+
+Build a polished, single-page professional portfolio and resume for Nasneem Khaleel.
+
+The primary positioning should be:
+
+QA Engineer – Email Campaigns & IVR Tester
+
+The website must communicate experience in:
+- Email campaign quality assurance
+- IVR and contact-centre testing
+- Cyara automation
+- Selenium automation
+- API and functional testing
+- Accessibility testing
+- Quality engineering
+
+The final result should be:
+- Professional
+- Modern
+- Responsive
+- Accessible
+- SEO-friendly
+- Fast-loading
+- Recruiter-friendly
+- Easy to maintain
+- Suitable for GitHub and Vercel deployment
+
+This document is the central project context reference.
+All future design, content, and development decisions should remain consistent with this specification.

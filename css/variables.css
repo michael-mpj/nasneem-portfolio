@@ -1,0 +1,14 @@
+:root {
+  --color-navy: #101B2B;
+  --color-emerald: #16856B;
+  --color-mint: #E7F4EF;
+  --color-background: #F5F7F8;
+  --color-gold: #E3AD58;
+  --color-text: #253244;
+  --color-muted: #687586;
+  --color-white: #ffffff;
+  --font-main: "Inter", sans-serif;
+  --container-width: 1160px;
+  --radius: 16px;
+  --shadow: 0 12px 35px rgba(16, 27, 43, .07);
+}
